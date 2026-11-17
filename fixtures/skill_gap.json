@@ -1,0 +1,127 @@
+{
+  "candidates": [
+    {
+      "id": "youth-1",
+      "owner_id": "station-north",
+      "skills": ["python", "sql"],
+      "minimum_salary": "7000",
+      "maximum_commute": 40,
+      "work_modes": ["onsite"],
+      "employer_score": "5"
+    },
+    {
+      "id": "youth-2",
+      "owner_id": "station-north",
+      "skills": ["python"],
+      "minimum_salary": "6000",
+      "maximum_commute": 45,
+      "work_modes": ["onsite", "remote"],
+      "employer_score": "4"
+    },
+    {
+      "id": "youth-3",
+      "owner_id": "station-east",
+      "skills": ["excel", "sql"],
+      "minimum_salary": "11000",
+      "maximum_commute": 30,
+      "work_modes": ["onsite"],
+      "employer_score": "3"
+    },
+    {
+      "id": "youth-4",
+      "owner_id": "station-east",
+      "skills": ["python", "sql", "etl"],
+      "minimum_salary": "9000",
+      "maximum_commute": 20,
+      "work_modes": ["onsite"],
+      "employer_score": "6"
+    },
+    {
+      "id": "youth-5",
+      "owner_id": "station-south",
+      "skills": [],
+      "minimum_salary": "0",
+      "maximum_commute": 60,
+      "work_modes": ["onsite", "remote"],
+      "employer_score": "2"
+    }
+  ],
+  "vacancies": [
+    {
+      "id": "job-software-1",
+      "owner_id": "employer-a",
+      "required_skills": ["python", "sql"],
+      "salary": "9000",
+      "commute_minutes": 30,
+      "work_mode": "onsite",
+      "industry": "software",
+      "capacity": 2
+    },
+    {
+      "id": "job-software-2",
+      "owner_id": "employer-a",
+      "required_skills": ["python", "django"],
+      "salary": "10000",
+      "commute_minutes": 35,
+      "work_mode": "onsite",
+      "industry": "software",
+      "capacity": 1
+    },
+    {
+      "id": "job-manufacturing-1",
+      "owner_id": "employer-b",
+      "required_skills": ["python", "mes"],
+      "salary": "8500",
+      "commute_minutes": 50,
+      "work_mode": "onsite",
+      "industry": "manufacturing",
+      "capacity": 3
+    },
+    {
+      "id": "job-finance-1",
+      "owner_id": "employer-c",
+      "required_skills": ["excel", "sql"],
+      "salary": "10000",
+      "commute_minutes": 25,
+      "work_mode": "onsite",
+      "industry": "finance",
+      "capacity": 1
+    },
+    {
+      "id": "job-finance-2",
+      "owner_id": "employer-c",
+      "required_skills": ["excel", "sql"],
+      "salary": "12000",
+      "commute_minutes": 25,
+      "work_mode": "onsite",
+      "industry": "finance",
+      "capacity": 1
+    },
+    {
+      "id": "job-logistics-1",
+      "owner_id": "employer-d",
+      "required_skills": ["excel"],
+      "salary": "6500",
+      "commute_minutes": 55,
+      "work_mode": "onsite",
+      "industry": "logistics",
+      "capacity": 4
+    },
+    {
+      "id": "job-logistics-remote",
+      "owner_id": "employer-d",
+      "required_skills": ["excel"],
+      "salary": "7000",
+      "commute_minutes": 10,
+      "work_mode": "remote",
+      "industry": "logistics",
+      "capacity": 1
+    }
+  ],
+  "context": {
+    "exposures": {
+      "job-software-1": 3,
+      "job-logistics-remote": 2
+    }
+  }
+}

@@ -36,6 +36,11 @@ class Reporter:
         rows=self.database.list_records(kind)
         output=io.StringIO(); fields=['kind',f'{kind}_id','owner_id','category','status','effective_from','effective_to','quantity','amount','version']
         writer=csv.DictWriter(output,fieldnames=fields,extrasaction='ignore'); writer.writeheader(); writer.writerows(rows); return output.getvalue()
+    def skill_gap(self,include_pair_evidence:bool=False) -> dict[str,Any]:
+        # Read-only: list_records only, no writes to records/events/outbox.
+        from .analytics.skill_gap import SkillGapAnalyzer,load_database_input
+        candidates,vacancies,exposures=load_database_input(self.database)
+        return SkillGapAnalyzer().analyze(candidates,vacancies,exposures,include_pair_evidence=include_pair_evidence).as_dict()
     def quality(self,kind:str) -> dict[str,Any]:
         rows=self.database.list_records(kind); issues=[]
         for row in rows:
